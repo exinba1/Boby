@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>我的视频网站</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:system-ui,"Microsoft YaHei",sans-serif;background:#0f172a;color:#e2e8f0;line-height:1.7}
+.container{width:min(1000px,92%);margin:auto}
+header{border-bottom:1px solid #334155;position:sticky;top:0;background:#0f172aee;backdrop-filter:blur(8px)}
+nav{display:flex;justify-content:space-between;padding:14px 0}
+.logo{font-weight:700}
+nav a{color:#94a3b8;text-decoration:none;margin-left:18px;font-size:14px}
+nav a:hover{color:#38bdf8}
+.hero{text-align:center;padding:70px 0 40px}
+.hero h1{font-size:clamp(28px,5vw,48px);margin-bottom:12px}
+.hero h1 span{color:#38bdf8}
+.hero p{color:#94a3b8;max-width:600px;margin:0 auto 24px}
+.btn{display:inline-block;background:#38bdf8;color:#082f49;padding:10px 20px;border-radius:99px;font-weight:700;text-decoration:none}
+section{padding:48px 0}
+h2{font-size:24px;margin-bottom:6px}
+.desc{color:#94a3b8;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.card{background:#1e293b;border:1px solid #334155;border-radius:14px;overflow:hidden}
+.frame{aspect-ratio:16/9;background:#020617;display:flex;align-items:center;justify-content:center;color:#94a3b8;font-size:13px;text-align:center;padding:16px;position:relative}
+.frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.info{padding:14px}
+.info h3{font-size:16px;margin-bottom:4px}
+.info p{color:#94a3b8;font-size:13px}
+.box{background:#1e293b;border:1px solid #334155;border-radius:14px;padding:20px}
+.box p+p{margin-top:8px}
+footer{border-top:1px solid #334155;text-align:center;padding:20px;color:#94a3b8;font-size:13px}
+@media(max-width:600px){nav a{display:none}.hero{padding:48px 0 28px}}
+</style>
+</head>
+<body>
+<header>
+<div class="container">
+<nav>
+<div class="logo">我的视频网站</div>
+<div>
+<a href="#videos">视频</a>
+<a href="#about">关于</a>
+<a href="#contact">联系</a>
+</div>
+</nav>
+</div>
+</header>
+
+<main class="container">
+<section class="hero">
+<h1>你好，我是 <span>你的名字</span></h1>
+<p>这里放一句简短介绍。下面是我的视频和作品，欢迎浏览。</p>
+<a class="btn" href="#videos">查看视频</a>
+</section>
+
+<section id="videos">
+<h2>视频展示</h2>
+<p class="desc">把 Bilibili / Vimeo / YouTube 的嵌入代码粘贴到每个视频框里。</p>
+<div class="grid">
+<div class="card">
+<div class="frame">
+<!-- 粘贴视频1嵌入代码到这里 -->
+视频1：粘贴嵌入代码
+</div>
+<div class="info"><h3>视频标题一</h3><p>一句话说明。</p></div>
+</div>
+<div class="card">
+<div class="frame">
+<!-- 粘贴视频2嵌入代码到这里 -->
+视频2：粘贴嵌入代码
+</div>
+<div class="info"><h3>视频标题二</h3><p>一句话说明。</p></div>
+</div>
+<div class="card">
+<div class="frame">
+<!-- 粘贴视频3嵌入代码到这里 -->
+视频3：粘贴嵌入代码
+</div>
+<div class="info"><h3>视频标题三</h3><p>一句话说明。</p></div>
+</div>
+</div>
+</section>
+
+<section id="about">
+<h2>关于我</h2>
+<p class="desc">简单介绍你的背景和网站内容方向。</p>
+<div class="box">
+<p>我是一名……，喜欢……。这个网站用来记录和分享……。</p>
+<p>这里可以再写一两句，不要太长。</p>
+</div>
+</section>
+
+<section id="contact">
+<h2>联系</h2>
+<p class="desc">换成你自己的邮箱和链接。</p>
+<div class="box">
+<p>邮箱：<a href="mailto: you@example.com" style="color:#38bdf8"> you@example.com</a></p>
+<p>Bilibili：<a href=" https://space.bilibili.com/你的UID" style="color:#38bdf8">我的B站主页</a></p>
+</div>
+</section>
+</main>
+
+<footer>© <span id="y"></span> 我的视频网站</footer>
+<script>document.getElementById("y").textContent=new Date().getFullYear();</script>
+</body>
+</html>
